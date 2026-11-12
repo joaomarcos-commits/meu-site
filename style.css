@@ -571,3 +571,10 @@ footer {
     }
 
 }
+.projeto-card:hover,
+.projeto-card.revelar.visivel:hover {
+    transform: translateY(-12px) !important;
+    translate: 0 0;
+    box-shadow: 0 18px 40px rgba(108, 99, 255, 0.25);
+    border-color: var(--destaque);
+}
