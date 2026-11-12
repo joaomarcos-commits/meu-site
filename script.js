@@ -112,13 +112,9 @@ if (digitacao) {
         const fraseAtual = frases[indiceFrase];
 
         if (apagando) {
-
             indiceLetra--;
-
         } else {
-
             indiceLetra++;
-
         }
 
         digitacao.textContent = fraseAtual.substring(0, indiceLetra);
