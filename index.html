@@ -6,9 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>João Marcos | Desenvolvedor Web</title>
+    <meta name="description" content="Portfólio de João Marcos, estudante de programação e desenvolvedor web.">
 
-    <meta name="description" content="Conheça João Marcos, estudante de programação e desenvolvedor de projetos web.">
+    <title>João Marcos | Desenvolvedor Web</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,10 +20,15 @@
 
 <body>
 
-    <nav>
-        <a href="#inicio" class="logo">João Marcos<span>.</span></a>
+    <!-- NAVEGAÇÃO -->
 
-        <div class="links">
+    <nav class="navegacao">
+
+        <a href="#inicio" class="logo">
+            João Marcos<span>.</span>
+        </a>
+
+        <div class="links-navegacao">
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
             <a href="#projetos">Projetos</a>
@@ -31,24 +36,47 @@
             <a href="#contato">Contato</a>
         </div>
 
-        <button id="tema" type="button" aria-label="Ativar tema escuro">🌙</button>
+        <button id="tema" aria-label="Ativar tema escuro">
+            🌙
+        </button>
+
     </nav>
 
 
-    <header id="inicio">
+    <!-- INÍCIO -->
 
-        <p class="destaque">DESENVOLVIMENTO WEB</p>
+    <header id="inicio" class="inicio">
 
-        <h1>Olá, eu sou <span>João Marcos.</span></h1>
+        <div class="inicio-conteudo">
 
-        <p class="descricao">
-            Estudante de programação, apaixonado por tecnologia
-            e pela criação de experiências digitais.
-        </p>
+            <span class="saudacao">Olá! Seja bem-vindo ao meu portfólio.</span>
 
-        <div class="botoes">
-            <a href="#projetos" class="botao">Conheça meus projetos</a>
-            <a href="#sobre" class="botao secundario">Sobre mim</a>
+            <h1>
+                Olá, eu sou <span>João Marcos.</span>
+            </h1>
+
+            <p class="texto-digitacao">
+                <span id="digitacao"></span><span class="cursor">|</span>
+            </p>
+
+            <p class="descricao-inicio">
+                Sou estudante de programação e gosto de transformar
+                ideias em projetos digitais. Estou desenvolvendo minhas
+                habilidades para criar sites cada vez melhores.
+            </p>
+
+            <div class="botoes">
+
+                <a href="#projetos" class="botao botao-principal">
+                    Ver meus projetos
+                </a>
+
+                <a href="#contato" class="botao botao-secundario">
+                    Entrar em contato
+                </a>
+
+            </div>
+
         </div>
 
     </header>
@@ -56,56 +84,60 @@
 
     <main>
 
-        <section id="sobre">
+        <!-- SOBRE -->
 
-            <p class="destaque">UM POUCO SOBRE MIM</p>
+        <section id="sobre" class="secao">
 
-            <h2>Quem sou eu?</h2>
+            <span class="subtitulo">Conheça um pouco sobre mim</span>
 
-            <p>
-                Sou estudante de programação e tenho grande interesse
-                por tecnologia e desenvolvimento web.
+            <h2>Sobre mim</h2>
 
-                Gosto de aprender coisas novas, resolver problemas
-                e transformar ideias em projetos reais.
+            <p class="texto-sobre">
+                Meu nome é João Marcos e sou estudante de programação.
+                Tenho interesse em tecnologia, desenvolvimento web e
+                criação de soluções digitais.
 
-                Atualmente, estou desenvolvendo minhas habilidades
-                em HTML, CSS, JavaScript e Python.
+                Atualmente, estudo HTML, CSS, JavaScript e Python,
+                colocando meus conhecimentos em prática através de
+                projetos próprios.
             </p>
 
         </section>
 
 
-        <section id="projetos">
+        <!-- PROJETOS -->
 
-            <p class="destaque">MEU TRABALHO</p>
+        <section id="projetos" class="secao">
 
-            <h2>Projetos em destaque</h2>
+            <span class="subtitulo">O que estou desenvolvendo</span>
 
-            <p class="texto-section">
-                Alguns dos projetos que desenvolvi durante
-                minha jornada na programação.
+            <h2>Meus projetos</h2>
+
+            <p class="introducao-secao">
+                Alguns dos projetos que desenvolvi durante meus estudos.
             </p>
 
             <div class="projetos-grid">
 
+                <!-- PROJETO 1 -->
+
                 <article class="projeto-card">
 
-                    <div class="projeto-imagem">
-                        <img
-                            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85"
-                            alt="Projeto de site para barbearia">
-                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85"
+                        alt="Interior de uma barbearia"
+                        class="projeto-imagem"
+                    >
 
                     <div class="projeto-conteudo">
 
-                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+                        <span class="categoria">Site comercial</span>
 
                         <h3>Barber Studio 2.0</h3>
 
                         <p>
-                            Site moderno para barbearia, com serviços,
-                            galeria de imagens e agendamento pelo WhatsApp.
+                            Site moderno para barbearia, com apresentação
+                            dos serviços e opção de contato.
                         </p>
 
                         <div class="tecnologias">
@@ -114,34 +146,39 @@
                             <span>JavaScript</span>
                         </div>
 
-                        <a href="https://joaomarcos-commits.github.io/barbearia-2.0/"
+                        <a
+                            href="https://joaomarcos-commits.github.io/barbearia-2.0/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="link-projeto">
+                            class="link-projeto"
+                        >
                             Visitar projeto ↗
                         </a>
 
                     </div>
+
                 </article>
 
 
+                <!-- PROJETO 2 -->
+
                 <article class="projeto-card">
 
-                    <div class="projeto-imagem">
-                        <img
-                            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85"
-                            alt="Projeto de site para barbearia">
-                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85"
+                        alt="Cadeira de uma barbearia"
+                        class="projeto-imagem"
+                    >
 
                     <div class="projeto-conteudo">
 
-                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+                        <span class="categoria">Site comercial</span>
 
                         <h3>Barbearia</h3>
 
                         <p>
-                            Projeto de apresentação de uma barbearia,
-                            com foco em identidade visual e divulgação.
+                            Projeto de site para apresentar uma barbearia
+                            e facilitar o contato com clientes.
                         </p>
 
                         <div class="tecnologias">
@@ -150,34 +187,39 @@
                             <span>JavaScript</span>
                         </div>
 
-                        <a href="https://joaomarcos-commits.github.io/barbearia/"
+                        <a
+                            href="https://joaomarcos-commits.github.io/barbearia/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="link-projeto">
+                            class="link-projeto"
+                        >
                             Visitar projeto ↗
                         </a>
 
                     </div>
+
                 </article>
 
 
+                <!-- PROJETO 3 -->
+
                 <article class="projeto-card">
 
-                    <div class="projeto-imagem">
-                        <img
-                            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
-                            alt="Projeto de site para academia">
-                    </div>
+                    <img
+                        src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                        alt="Academia com equipamentos de musculação"
+                        class="projeto-imagem"
+                    >
 
                     <div class="projeto-conteudo">
 
-                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+                        <span class="categoria">Site comercial</span>
 
                         <h3>FitZone Academia</h3>
 
                         <p>
-                            Site de academia com apresentação,
-                            informações e identidade visual própria.
+                            Site para academia com informações,
+                            apresentação e identidade visual.
                         </p>
 
                         <div class="tecnologias">
@@ -186,14 +228,17 @@
                             <span>JavaScript</span>
                         </div>
 
-                        <a href="https://joaomarcos-commits.github.io/academia/"
+                        <a
+                            href="https://joaomarcos-commits.github.io/academia/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            class="link-projeto">
+                            class="link-projeto"
+                        >
                             Visitar projeto ↗
                         </a>
 
                     </div>
+
                 </article>
 
             </div>
@@ -201,37 +246,42 @@
         </section>
 
 
-        <section id="tecnologias">
+        <!-- TECNOLOGIAS -->
 
-            <p class="destaque">FERRAMENTAS</p>
+        <section id="tecnologias" class="secao">
 
-            <h2>Tecnologias que estudo</h2>
+            <span class="subtitulo">Ferramentas que estou aprendendo</span>
 
-            <p class="texto-section">
-                Ferramentas que utilizo para aprender e desenvolver
-                meus projetos.
+            <h2>Tecnologias</h2>
+
+            <p class="introducao-secao">
+                Tecnologias que fazem parte da minha jornada na programação.
             </p>
 
             <div class="lista-tecnologias">
 
-                <div class="tecnologia">
-                    <span>HTML</span>
-                    <p>Estrutura de páginas web</p>
+                <div class="tecnologia-item">
+                    <span>🌐</span>
+                    <h3>HTML</h3>
+                    <p>Estrutura de páginas web.</p>
                 </div>
 
-                <div class="tecnologia">
-                    <span>CSS</span>
-                    <p>Estilização e design</p>
+                <div class="tecnologia-item">
+                    <span>🎨</span>
+                    <h3>CSS</h3>
+                    <p>Estilização e design de sites.</p>
                 </div>
 
-                <div class="tecnologia">
-                    <span>JavaScript</span>
-                    <p>Interatividade e funcionalidades</p>
+                <div class="tecnologia-item">
+                    <span>⚡</span>
+                    <h3>JavaScript</h3>
+                    <p>Interatividade e funcionalidades.</p>
                 </div>
 
-                <div class="tecnologia">
-                    <span>Python</span>
-                    <p>Lógica e programação</p>
+                <div class="tecnologia-item">
+                    <span>🐍</span>
+                    <h3>Python</h3>
+                    <p>Lógica e desenvolvimento.</p>
                 </div>
 
             </div>
@@ -239,39 +289,45 @@
         </section>
 
 
-        <section id="objetivos">
+        <!-- OBJETIVOS -->
 
-            <p class="destaque">OLHANDO PARA FRENTE</p>
+        <section id="objetivos" class="secao objetivos">
+
+            <span class="subtitulo">Minha jornada</span>
 
             <h2>Onde quero chegar</h2>
 
             <p>
-                Meu objetivo é me tornar um desenvolvedor Full Stack,
-                aprofundar meus conhecimentos e criar sites,
-                aplicativos e soluções digitais.
+                Meu objetivo é continuar aprendendo, desenvolver projetos
+                cada vez mais completos e me tornar um desenvolvedor
+                Full Stack.
 
-                Quero transformar meu aprendizado em projetos cada
-                vez melhores e construir minha carreira na tecnologia.
+                Estou apenas começando, mas cada projeto representa
+                mais um passo nessa jornada.
             </p>
 
         </section>
 
 
-        <section id="contato">
+        <!-- CONTATO -->
 
-            <p class="destaque">VAMOS CONVERSAR?</p>
+        <section id="contato" class="secao contato">
+
+            <span class="subtitulo">Vamos nos conectar?</span>
 
             <h2>Entre em contato</h2>
 
             <p>
-                Tem uma ideia de projeto ou gostaria de conhecer
-                melhor meu trabalho?
+                Quer conhecer meus projetos ou acompanhar minha evolução
+                na programação?
             </p>
 
-            <a href="https://github.com/joaomarcos-commits"
+            <a
+                href="https://github.com/joaomarcos-commits"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="botao">
+                class="botao botao-principal"
+            >
                 Meu GitHub ↗
             </a>
 
@@ -280,14 +336,14 @@
     </main>
 
 
+    <!-- RODAPÉ -->
+
     <footer>
 
         <p>
-            Desenvolvido por João Marcos ©
-            <span id="ano"></span>
+            © <span id="ano"></span> João Marcos.
+            Desenvolvido com dedicação.
         </p>
-
-        <a href="#inicio">Voltar ao topo ↑</a>
 
     </footer>
 
