@@ -1,6 +1,6 @@
 
 /* =====================================
-   VARIÁVEIS E CONFIGURAÇÕES
+   VARIÁVEIS
 ===================================== */
 
 :root {
@@ -43,15 +43,11 @@ nav {
     justify-content: space-between;
     align-items: center;
     gap: 25px;
-
     padding: 18px 8%;
-
     background: var(--cartao);
-
     position: sticky;
     top: 0;
     z-index: 10;
-
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
 }
 
@@ -108,14 +104,11 @@ nav {
 
 header {
     min-height: 570px;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
-
     padding: 110px 20px;
 
     background:
@@ -169,16 +162,12 @@ header p.descricao {
 
 .botao {
     display: inline-block;
-
     background: var(--destaque);
     color: white;
-
     padding: 13px 24px;
     border-radius: 10px;
-
     text-decoration: none;
     font-weight: 600;
-
     transition: 0.3s;
 }
 
@@ -249,11 +238,8 @@ section > p:not(.destaque) {
     border: 1px solid var(--borda);
     border-radius: 16px;
     overflow: hidden;
-
     box-shadow: var(--sombra);
-
     transition: transform 0.3s, box-shadow 0.3s;
-
     display: flex;
     flex-direction: column;
 }
@@ -439,7 +425,6 @@ body.escuro {
     --destaque-hover: #aaa5ff;
     --texto-secundario: #b1b1c0;
     --borda: #30303d;
-
     --sombra: 0 10px 35px rgba(0, 0, 0, 0.2);
 }
 
