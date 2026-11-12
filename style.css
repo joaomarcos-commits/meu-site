@@ -1,9 +1,17 @@
 
+/* =====================================
+   VARIÁVEIS E CONFIGURAÇÕES
+===================================== */
+
 :root {
-    --fundo: #f5f5f5;
-    --texto: #222222;
+    --fundo: #f5f5fa;
+    --texto: #20202b;
     --cartao: #ffffff;
     --destaque: #6c63ff;
+    --destaque-hover: #554cf0;
+    --texto-secundario: #666675;
+    --borda: #e7e7ef;
+    --sombra: 0 10px 35px rgba(30, 25, 70, 0.07);
 }
 
 * {
@@ -17,167 +25,525 @@ body {
     font-family: 'Inter', sans-serif;
     background: var(--fundo);
     color: var(--texto);
-    transition: 0.3s;
-    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+    line-height: 1.7;
 }
+
+a {
+    color: inherit;
+}
+
+
+/* =====================================
+   MENU
+===================================== */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
+    gap: 25px;
+
+    padding: 18px 8%;
+
     background: var(--cartao);
+
     position: sticky;
     top: 0;
     z-index: 10;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 25px;
     font-weight: 800;
     color: var(--destaque);
     text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--texto);
 }
 
 .links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    gap: 28px;
 }
 
 .links a {
     color: var(--texto);
     text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
 .links a:hover {
     color: var(--destaque);
 }
 
-button {
+#tema {
     border: none;
     background: var(--destaque);
     color: white;
     padding: 10px 14px;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
 }
 
+#tema:hover {
+    background: var(--destaque-hover);
+    transform: scale(1.05);
+}
+
+
+/* =====================================
+   APRESENTAÇÃO
+===================================== */
+
 header {
+    min-height: 570px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     text-align: center;
-    padding: 120px 20px;
+
+    padding: 110px 20px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(108, 99, 255, 0.12),
+            transparent 55%
+        );
+}
+
+header .destaque {
+    margin-bottom: 15px;
+}
+
+.destaque {
+    color: var(--destaque);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }
 
 header h1 {
-    font-size: 48px;
-    margin: 15px 0;
+    font-size: clamp(38px, 6vw, 60px);
+    line-height: 1.2;
+    margin: 15px 0 20px;
+    font-weight: 800;
 }
 
 header h1 span {
     color: var(--destaque);
 }
 
-header p {
-    max-width: 600px;
-    margin: 15px auto;
+header p.descricao {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: var(--texto-secundario);
+    font-size: 18px;
 }
 
-.destaque {
-    color: var(--destaque);
-    font-weight: 700;
+.botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
 }
+
+
+/* =====================================
+   BOTÕES
+===================================== */
 
 .botao {
     display: inline-block;
+
     background: var(--destaque);
     color: white;
-    padding: 12px 22px;
+
+    padding: 13px 24px;
     border-radius: 10px;
+
     text-decoration: none;
-    margin-top: 15px;
+    font-weight: 600;
+
+    transition: 0.3s;
 }
 
+.botao:hover {
+    background: var(--destaque-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+}
+
+.botao.secundario {
+    background: transparent;
+    color: var(--destaque);
+    border: 1px solid var(--destaque);
+}
+
+.botao.secundario:hover {
+    background: var(--destaque);
+    color: white;
+}
+
+
+/* =====================================
+   CONTEÚDO GERAL
+===================================== */
+
 main {
-    max-width: 850px;
+    max-width: 1200px;
     margin: auto;
-    padding: 20px;
+    padding: 20px 35px;
 }
 
 section {
-    margin: 50px 0;
+    margin: 100px 0;
+    scroll-margin-top: 100px;
 }
 
-h2 {
-    font-size: 28px;
+section h2 {
+    font-size: clamp(29px, 4vw, 38px);
+    margin: 10px 0 20px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+section > p:not(.destaque) {
+    max-width: 780px;
+    color: var(--texto-secundario);
+    font-size: 17px;
+}
+
+.texto-section {
+    margin-bottom: 35px;
+}
+
+
+/* =====================================
+   PROJETOS
+===================================== */
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.projeto-card {
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+    overflow: hidden;
+
+    box-shadow: var(--sombra);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.projeto-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 40px rgba(30, 25, 70, 0.13);
+}
+
+.projeto-imagem {
+    height: 210px;
+    overflow: hidden;
+    background: var(--borda);
+}
+
+.projeto-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.projeto-card:hover .projeto-imagem img {
+    transform: scale(1.06);
+}
+
+.projeto-conteudo {
+    padding: 23px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.categoria {
+    color: var(--destaque);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.projeto-conteudo h3 {
+    font-size: 21px;
+    margin: 10px 0;
+}
+
+.projeto-conteudo p {
+    color: var(--texto-secundario);
+    font-size: 14px;
+    line-height: 1.7;
     margin-bottom: 20px;
 }
 
-.cartao {
-    background: var(--cartao);
-    padding: 25px;
-    border-radius: 15px;
-    margin: 15px 0;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.cartao h3 {
-    color: var(--destaque);
-    margin-bottom: 10px;
-}
-
-#lista-interesses {
+.tecnologias {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 20px;
+    gap: 8px;
+    margin-top: auto;
+    margin-bottom: 20px;
 }
 
-.interesse {
+.tecnologias span {
+    background: rgba(108, 99, 255, 0.1);
+    color: var(--destaque);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.link-projeto {
+    color: var(--destaque);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.link-projeto:hover {
+    color: var(--destaque-hover);
+    padding-left: 5px;
+}
+
+
+/* =====================================
+   TECNOLOGIAS
+===================================== */
+
+.lista-tecnologias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.tecnologia {
     background: var(--cartao);
-    padding: 12px 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    border: 1px solid var(--destaque);
-    color: var(--texto);
+    border: 1px solid var(--borda);
+    padding: 23px 15px;
+    border-radius: 13px;
+    text-align: center;
+    transition: 0.3s;
 }
 
-.interesse:hover {
-    background: var(--destaque);
-    color: white;
+.tecnologia:hover {
+    border-color: var(--destaque);
+    transform: translateY(-5px);
 }
+
+.tecnologia span {
+    color: var(--destaque);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.tecnologia p {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    margin-top: 8px;
+}
+
+
+/* =====================================
+   OBJETIVOS
+===================================== */
+
+#objetivos {
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 18px;
+    padding: 45px;
+    box-shadow: var(--sombra);
+}
+
+
+/* =====================================
+   CONTATO
+===================================== */
+
+#contato {
+    text-align: center;
+    padding: 55px 20px;
+    background: rgba(108, 99, 255, 0.07);
+    border-radius: 18px;
+}
+
+#contato > p:not(.destaque) {
+    margin: 0 auto;
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
 
 footer {
     text-align: center;
-    padding: 30px;
+    padding: 30px 20px;
     background: var(--cartao);
-    margin-top: 50px;
+    border-top: 1px solid var(--borda);
+    margin-top: 60px;
+    color: var(--texto-secundario);
+    font-size: 14px;
 }
 
-/* Modo escuro */
+footer a {
+    display: inline-block;
+    margin-top: 8px;
+    color: var(--destaque);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+
+/* =====================================
+   MODO ESCURO
+===================================== */
 
 body.escuro {
-    --fundo: #151515;
-    --texto: #f5f5f5;
-    --cartao: #242424;
+    --fundo: #111116;
+    --texto: #f2f2f7;
+    --cartao: #1d1d26;
+    --destaque: #918aff;
+    --destaque-hover: #aaa5ff;
+    --texto-secundario: #b1b1c0;
+    --borda: #30303d;
+
+    --sombra: 0 10px 35px rgba(0, 0, 0, 0.2);
 }
 
-/* Celulares */
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .projetos-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .lista-tecnologias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        padding: 18px 5%;
+    }
+
+    .links {
+        gap: 16px;
+    }
+}
+
+
+/* =====================================
+   CELULARES
+===================================== */
 
 @media (max-width: 600px) {
+
     nav {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
     }
 
-    .links {
-        gap: 12px;
-        flex-wrap: wrap;
-    }
-
-    header h1 {
-        font-size: 34px;
+    .links a {
+        font-size: 13px;
     }
 
     header {
+        min-height: 500px;
         padding: 80px 20px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p.descricao {
+        font-size: 16px;
+    }
+
+    main {
+        padding: 10px 20px;
+    }
+
+    section {
+        margin: 75px 0;
+    }
+
+    section h2 {
+        font-size: 29px;
+    }
+
+    .projetos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projeto-imagem {
+        height: 230px;
+    }
+
+    .lista-tecnologias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #objetivos {
+        padding: 28px 22px;
+    }
+
+    .botoes {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .botoes .botao {
+        width: 100%;
     }
 }
