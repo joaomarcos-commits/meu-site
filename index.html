@@ -1,13 +1,18 @@
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu site | Markin</title>
+
+    <title>João Marcos | Desenvolvedor Web</title>
+
+    <meta name="description" content="Conheça João Marcos, estudante de programação e desenvolvedor de projetos web.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
@@ -15,87 +20,306 @@
 
 <body>
 
+    <!-- MENU -->
+
     <nav>
-        <a href="#inicio" class="logo">Markin.</a>
+        <a href="#inicio" class="logo">João Marcos<span>.</span></a>
 
         <div class="links">
+            <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
-            <a href="#historia">História</a>
-            <a href="#interesses">Interesses</a>
-            <a href="#futuro">Futuro</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#tecnologias">Tecnologias</a>
+            <a href="#contato">Contato</a>
         </div>
 
-        <button id="tema">🌙</button>
+        <button id="tema" aria-label="Alternar tema">🌙</button>
     </nav>
 
-    <header id="inicio">
-        <p class="destaque">Bem-vindo ao meu espaço!</p>
-        <h1>Olá, eu sou o <span>Markin.</span></h1>
-        <p>Tenho 13 anos, gosto de tecnologia, programação, jogos e estou construindo meu caminho no mundo da programação.</p>
 
-        <a href="#sobre" class="botao">Conheça minha história</a>
+    <!-- APRESENTAÇÃO -->
+
+    <header id="inicio">
+
+        <p class="destaque">DESENVOLVIMENTO WEB</p>
+
+        <h1>
+            Olá, eu sou <span>João Marcos.</span>
+        </h1>
+
+        <p class="descricao">
+            Estudante de programação, apaixonado por tecnologia
+            e pela criação de experiências digitais.
+        </p>
+
+        <div class="botoes">
+            <a href="#projetos" class="botao">
+                Conheça meus projetos
+            </a>
+
+            <a href="#sobre" class="botao secundario">
+                Sobre mim
+            </a>
+        </div>
+
     </header>
+
 
     <main>
 
+        <!-- SOBRE -->
+
         <section id="sobre">
-            <h2>Sobre mim</h2>
+
+            <p class="destaque">UM POUCO SOBRE MIM</p>
+
+            <h2>Quem sou eu?</h2>
+
             <p>
-                Sou uma pessoa curiosa, gosto de aprender coisas novas e
-                tenho bastante interesse por tecnologia. Atualmente estou
-                estudando programação e explorando o desenvolvimento web.
+                Sou estudante de programação e tenho grande interesse
+                por tecnologia e desenvolvimento web.
+
+                Gosto de aprender coisas novas, resolver problemas
+                e transformar ideias em projetos reais.
+
+                Atualmente, estou desenvolvendo minhas habilidades
+                em HTML, CSS, JavaScript e Python.
             </p>
+
         </section>
 
-        <section id="historia">
-            <h2>Minha jornada</h2>
 
-            <div class="cartao">
-                <h3>O começo</h3>
-                <p>Comecei a me interessar por tecnologia e programação,
-                descobrindo como os sites, jogos e aplicativos funcionam.</p>
+        <!-- PROJETOS -->
+
+        <section id="projetos">
+
+            <p class="destaque">MEU TRABALHO</p>
+
+            <h2>Projetos em destaque</h2>
+
+            <p class="texto-section">
+                Alguns dos projetos que desenvolvi durante
+                minha jornada na programação.
+            </p>
+
+
+            <div class="projetos-grid">
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <img
+                            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=85"
+                            alt="Projeto de site para barbearia">
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+
+                        <h3>Barber Studio 2.0</h3>
+
+                        <p>
+                            Site moderno para barbearia, com serviços,
+                            galeria de imagens e agendamento pelo WhatsApp.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="https://joaomarcos-commits.github.io/barbearia-2.0/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-projeto">
+                            Visitar projeto ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <img
+                            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=800&q=85"
+                            alt="Projeto de site para barbearia">
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+
+                        <h3>Barbearia</h3>
+
+                        <p>
+                            Projeto de apresentação de uma barbearia,
+                            com foco em identidade visual e divulgação.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="https://joaomarcos-commits.github.io/barbearia/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-projeto">
+                            Visitar projeto ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="projeto-card">
+
+                    <div class="projeto-imagem">
+                        <img
+                            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=85"
+                            alt="Projeto de site para academia">
+                    </div>
+
+                    <div class="projeto-conteudo">
+
+                        <span class="categoria">DESENVOLVIMENTO WEB</span>
+
+                        <h3>FitZone Academia</h3>
+
+                        <p>
+                            Site de academia com apresentação,
+                            informações e identidade visual própria.
+                        </p>
+
+                        <div class="tecnologias">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+
+                        <a href="https://joaomarcos-commits.github.io/academia/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="link-projeto">
+                            Visitar projeto ↗
+                        </a>
+
+                    </div>
+
+                </article>
+
             </div>
 
-            <div class="cartao">
-                <h3>Aprendendo programação</h3>
-                <p>Comecei a estudar Python, HTML, CSS e JavaScript,
-                colocando meus conhecimentos em prática.</p>
-            </div>
-
-            <div class="cartao">
-                <h3>O próximo passo</h3>
-                <p>Quero continuar evoluindo, criar projetos próprios
-                e aprender cada vez mais.</p>
-            </div>
         </section>
 
-        <section id="interesses">
-            <h2>Meus interesses</h2>
-            <p>Algumas coisas de que gosto:</p>
 
-            <div id="lista-interesses"></div>
+        <!-- TECNOLOGIAS -->
+
+        <section id="tecnologias">
+
+            <p class="destaque">FERRAMENTAS</p>
+
+            <h2>Tecnologias que estudo</h2>
+
+            <p class="texto-section">
+                Ferramentas que utilizo para aprender e desenvolver
+                meus projetos.
+            </p>
+
+            <div class="lista-tecnologias">
+
+                <div class="tecnologia">
+                    <span>HTML</span>
+                    <p>Estrutura de páginas web</p>
+                </div>
+
+                <div class="tecnologia">
+                    <span>CSS</span>
+                    <p>Estilização e design</p>
+                </div>
+
+                <div class="tecnologia">
+                    <span>JavaScript</span>
+                    <p>Interatividade e funcionalidades</p>
+                </div>
+
+                <div class="tecnologia">
+                    <span>Python</span>
+                    <p>Lógica e programação</p>
+                </div>
+
+            </div>
+
         </section>
 
-        <section id="futuro">
-            <h2>Meus objetivos</h2>
+
+        <!-- OBJETIVOS -->
+
+        <section id="objetivos">
+
+            <p class="destaque">OLHANDO PARA FRENTE</p>
+
+            <h2>Onde quero chegar</h2>
+
             <p>
                 Meu objetivo é me tornar um desenvolvedor Full Stack,
-                criando sites, aplicativos e projetos que possam fazer
-                a diferença.
+                aprofundar meus conhecimentos e criar sites,
+                aplicativos e soluções digitais.
+
+                Quero transformar meu aprendizado em projetos cada
+                vez melhores e construir minha carreira na tecnologia.
             </p>
+
         </section>
 
+
+        <!-- CONTATO -->
+
         <section id="contato">
-            <h2>Fim da página!</h2>
-            <p>Obrigado por conhecer um pouco sobre mim.</p>
+
+            <p class="destaque">VAMOS CONVERSAR?</p>
+
+            <h2>Entre em contato</h2>
+
+            <p>
+                Tem uma ideia de projeto ou gostaria de conhecer
+                melhor meu trabalho?
+            </p>
+
+            <a href="https://github.com/joaomarcos-commits"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="botao">
+                Meu GitHub ↗
+            </a>
+
         </section>
 
     </main>
 
+
+    <!-- RODAPÉ -->
+
     <footer>
-        <p>Feito por Markin © <span id="ano"></span></p>
+
+        <p>
+            Desenvolvido por João Marcos ©
+            <span id="ano"></span>
+        </p>
+
+        <a href="#inicio">Voltar ao topo ↑</a>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
