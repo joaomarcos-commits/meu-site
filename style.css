@@ -1,8 +1,4 @@
 
-/* =====================================
-   CONFIGURAÇÕES GERAIS
-===================================== */
-
 :root {
     --fundo: #f5f5fa;
     --texto: #171725;
@@ -54,9 +50,7 @@ button {
 }
 
 
-/* =====================================
-   NAVEGAÇÃO
-===================================== */
+/* NAVEGAÇÃO */
 
 .navegacao {
     width: 100%;
@@ -119,9 +113,7 @@ button {
 }
 
 
-/* =====================================
-   INÍCIO
-===================================== */
+/* INÍCIO */
 
 .inicio {
     min-height: 620px;
@@ -197,9 +189,7 @@ button {
 }
 
 
-/* =====================================
-   BOTÕES
-===================================== */
+/* BOTÕES */
 
 .botoes {
     display: flex;
@@ -238,9 +228,7 @@ button {
 }
 
 
-/* =====================================
-   SEÇÕES
-===================================== */
+/* SEÇÕES */
 
 main {
     max-width: 1200px;
@@ -283,9 +271,7 @@ main {
 }
 
 
-/* =====================================
-   PROJETOS
-===================================== */
+/* PROJETOS */
 
 .projetos-grid {
     display: grid;
@@ -299,12 +285,19 @@ main {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--sombra);
-    transition: transform 0.3s, border-color 0.3s;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
 }
 
-.projeto-card:hover {
-    transform: translateY(-7px);
+/* EFEITO DE SUBIR AO PASSAR O MOUSE */
+
+.projeto-card:hover,
+.projeto-card.revelar.visivel:hover {
+    transform: translateY(-10px);
     border-color: var(--destaque);
+    box-shadow: 0 18px 40px rgba(108, 99, 255, 0.16);
 }
 
 .projeto-imagem {
@@ -367,9 +360,7 @@ main {
 }
 
 
-/* =====================================
-   TECNOLOGIAS
-===================================== */
+/* TECNOLOGIAS */
 
 .lista-tecnologias {
     display: grid;
@@ -405,9 +396,7 @@ main {
 }
 
 
-/* =====================================
-   OBJETIVOS
-===================================== */
+/* OBJETIVOS */
 
 .objetivos {
     background:
@@ -423,9 +412,7 @@ main {
 }
 
 
-/* =====================================
-   CONTATO
-===================================== */
+/* CONTATO */
 
 .contato {
     text-align: center;
@@ -440,9 +427,7 @@ main {
 }
 
 
-/* =====================================
-   RODAPÉ
-===================================== */
+/* RODAPÉ */
 
 footer {
     text-align: center;
@@ -452,9 +437,7 @@ footer {
 }
 
 
-/* =====================================
-   ANIMAÇÕES AO ROLAR
-===================================== */
+/* ANIMAÇÕES AO ROLAR */
 
 .revelar {
     opacity: 0;
@@ -471,9 +454,7 @@ footer {
 }
 
 
-/* =====================================
-   RESPONSIVIDADE
-===================================== */
+/* RESPONSIVIDADE */
 
 @media (max-width: 900px) {
 
